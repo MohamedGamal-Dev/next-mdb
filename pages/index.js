@@ -1,8 +1,8 @@
 import Head from 'next/head';
+import { MoviesList } from '@/features';
+import { results } from '@/utils';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export default function Home() {
+export default function Home({ movies }) {
   return (
     <>
       <Head>
@@ -12,8 +12,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <MoviesList movies={movies} />
       </main>
     </>
   );
 }
+
+export const getStaticProps = () => {
+  return {
+    props: { movies: results },
+  };
+};
