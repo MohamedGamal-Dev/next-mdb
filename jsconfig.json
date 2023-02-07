@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/layout": ["./features/layout/index"],
+      "@/utils": ["./features/utils/index"],
+      "@/routes": ["./routes/index"],
     }
   }
 }
