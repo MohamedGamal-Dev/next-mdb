@@ -3,9 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@/layout": ["./features/layout/index"],
+      "@/layouts": ["./features/layouts/index"],
       "@/utils": ["./features/utils/index"],
-      "@/routes": ["./routes/index"],
+      "@/routes": ["./features/routes/index"]
     }
   }
 }
