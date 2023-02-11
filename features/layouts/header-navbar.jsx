@@ -11,7 +11,7 @@ export const HeaderNavbar = () => {
   return (
     <nav className="p-3 bg-zinc-900 border-zinc-800">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <Link href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <MdBurstMode className="w-auto h-8 mr-2 sm:h-10 fill-white" />
           <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
             NEXT-MDB

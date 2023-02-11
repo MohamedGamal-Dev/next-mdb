@@ -16,4 +16,8 @@ export const apiRequests = {
     title: 'Top Rated',
     url: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   },
+  now_playing: {
+    title: 'Now Playing',
+    url: `/movie/now_playing?api_key=${API_KEY}&language=en-US`,
+  },
 };

@@ -4,19 +4,19 @@ export const navList = [
     to: '/',
   },
   {
-    title: 'Movies',
-    to: '#',
-  },
-  {
     title: 'Popular',
-    to: '#',
+    to: '/?genre=popular',
   },
   {
     title: 'Trending',
-    to: '#',
+    to: '/?genre=trending',
+  },
+  {
+    title: 'Top Rated',
+    to: '/?genre=top_rated',
   },
   {
     title: 'About',
-    to: '#',
+    to: '/about',
   },
 ];
