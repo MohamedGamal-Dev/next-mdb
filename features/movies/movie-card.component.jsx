@@ -2,10 +2,11 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaStar } from 'react-icons/fa';
 
-import { baseImagesURL } from '../routes';
+import { baseImagesURL } from '@/routes';
 
 export const MovieCard = ({ movie }) => {
   const {
+    id,
     title,
     name,
     overview,
@@ -27,11 +28,13 @@ export const MovieCard = ({ movie }) => {
           height={216}
           objectFit="cover"
           priority={true}
+          placeholder="blur"
+          blurDataURL={baseImagesURL + backdrop_path}
         />
       </div>
 
       <div className="p-4">
-        <Link href="#">
+        <Link href={`/${id}`}>
           <h2 className="mb-2 text-2xl font-bold tracking-tight text-white truncate lg:text-lg">
             {title || name}
           </h2>
