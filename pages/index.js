@@ -1,5 +1,8 @@
 import Head from 'next/head';
+import axios from 'axios';
+
 import { MoviesList } from '@/features';
+import { baseURL, apiRequests } from '@/routes';
 import { results } from '@/utils';
 
 export default function Home({ movies }) {
@@ -18,8 +21,16 @@ export default function Home({ movies }) {
   );
 }
 
-export const getStaticProps = () => {
+export const getServerSideProps = async (context) => {
+  const genre = context.query.genre || "now_playing";
+
+  const { data } = await axios.get(`${baseURL}${apiRequests[genre].url}`);
   return {
-    props: { movies: results },
+    props: { movies: data.results },
   };
+  
+  // DEV - MODE ONLY
+  // return {
+  //   props: { movies: results },
+  // };
 };
